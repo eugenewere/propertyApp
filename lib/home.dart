@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_phosphor_icons/flutter_phosphor_icons.dart';
 import 'package:realhouse/categories.dart';
@@ -111,6 +112,306 @@ class _HomeState extends State<Home> {
                     hintText: 'Search Property',
                   ),
                 ),
+              ),
+              Card(
+                elevation: 1,
+                shape: RoundedRectangleBorder(
+                  side: BorderSide(color: Colors.white, width: 1),
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                clipBehavior: Clip.hardEdge,
+                child: Container(
+                  child: Column(
+                    children: [
+                      Container(
+                        child: Stack(
+                          children: [
+                            Container(
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.only(
+                                      bottomLeft: Radius.circular(10),
+                                      bottomRight: Radius.circular(10))),
+                              child: Image(
+                                fit: BoxFit.cover,
+                                image: NetworkImage(
+                                    "https://blog.capterra.com/wp-content/uploads/2019/12/house-5.jpg"),
+                              ),
+                            ),
+                            Positioned(
+                              child: Container(
+                                padding: EdgeInsets.all(5),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                clipBehavior: Clip.hardEdge,
+                                child: Icon(
+                                  PhosphorIcons.heart_bold,
+                                  color: Colors.black,
+                                ),
+                              ),
+                              top: 20,
+                              right: 20,
+                            ),
+                            Positioned(
+                              child: Container(
+                                padding: EdgeInsets.all(5),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                clipBehavior: Clip.hardEdge,
+                                child: Icon(
+                                  PhosphorIcons.shuffle_bold,
+                                  color: Colors.black,
+                                ),
+                              ),
+                              top: 20,
+                              right: 60,
+                            ),
+                            Positioned(
+                                bottom: 0,
+                                child: Container(
+                                  width: _sizeWidth * .94,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.only(
+                                          topRight: Radius.circular(20),
+                                          topLeft: Radius.circular(20)),
+                                      color: Colors.black.withOpacity(.3)),
+                                  padding: EdgeInsets.all(9),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    // crossAxisAlignment: CrossAxisAlignment.end,
+                                    children: [
+                                      Text(
+                                        'Affordable 2 BHK Flats ...',
+                                        softWrap: true,
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 23,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ],
+                                  ),
+                                ))
+                          ],
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.all(10),
+                        child: Column(
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Container(
+                                  child: Row(
+                                    children: [
+                                      Icon(
+                                        PhosphorIcons.stack_bold,
+                                        color: mcolor,
+                                        size: 19,
+                                      ),
+                                      SizedBox(
+                                        width: 4,
+                                      ),
+                                      Text(
+                                        'Apartment',
+                                        style: TextStyle(
+                                            color: mcolor,
+                                            fontSize: 19,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  child: Row(
+                                    children: [
+                                      Icon(
+                                        PhosphorIcons.star_fill,
+                                        color: Colors.yellow,
+                                        size: 15,
+                                      ),
+                                      SizedBox(
+                                        width: 4,
+                                      ),
+                                      Text(
+                                        "4.3",
+                                        style: TextStyle(fontSize: 15),
+                                      ),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(vertical: 8.0),
+                              child: Row(
+                                children: [
+                                  Text(
+                                    '8,000 - 10,000',
+                                    style: TextStyle(
+                                        fontSize: 23,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  SizedBox(
+                                    width: 4,
+                                  ),
+                                  Text(
+                                    'KSHS',
+                                    style: TextStyle(
+                                        fontSize: 23,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  SizedBox(
+                                    width: 4,
+                                  ),
+                                  Text(
+                                    '/ Month',
+                                    style: TextStyle(
+                                        fontSize: 23,
+                                        color: Colors.grey,
+                                        fontStyle: FontStyle.italic,
+                                        fontWeight: FontWeight.normal),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(vertical: 3.0),
+                              child: Row(
+                                children: [
+                                  Icon(
+                                    PhosphorIcons.map_pin_bold,
+                                    color: Colors.grey,
+                                    size: 19,
+                                  ),
+                                  SizedBox(
+                                    width: 4,
+                                  ),
+                                  Text(
+                                    'Juja, Kalimoni A3',
+                                    style: TextStyle(
+                                        color: Colors.grey,
+                                        fontSize: 19,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(vertical: 7.0),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Container(
+                                    child: Row(
+                                      children: [
+                                        Icon(
+                                          PhosphorIcons.corners_in_bold,
+                                          color: Colors.grey,
+                                          size: 19,
+                                        ),
+                                        SizedBox(
+                                          width: 4,
+                                        ),
+                                        Text(
+                                          '400 sqft',
+                                          style: TextStyle(
+                                              color: Colors.grey,
+                                              fontSize: 19,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  Container(
+                                    child: Row(
+                                      children: [
+                                        Icon(
+                                          PhosphorIcons.bed,
+                                          color: Colors.grey,
+                                          size: 19,
+                                        ),
+                                        SizedBox(
+                                          width: 4,
+                                        ),
+                                        Text(
+                                          '2 - 3',
+                                          style: TextStyle(
+                                              color: Colors.grey,
+                                              fontSize: 19,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  Container(
+                                    child: Row(
+                                      children: [
+                                        Icon(
+                                          PhosphorIcons.car_fill,
+                                          color: Colors.grey,
+                                          size: 19,
+                                        ),
+                                        SizedBox(
+                                          width: 4,
+                                        ),
+                                        Text(
+                                          '2 - 4',
+                                          style: TextStyle(
+                                              color: Colors.grey,
+                                              fontSize: 19,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  Container(
+                                    child: Row(
+                                      children: [
+                                        Icon(
+                                          Icons.bathtub,
+                                          color: Colors.grey,
+                                          size: 19,
+                                        ),
+                                        SizedBox(
+                                          width: 4,
+                                        ),
+                                        Text(
+                                          '1 - 3',
+                                          style: TextStyle(
+                                              color: Colors.grey,
+                                              fontSize: 19,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              Container(
+                height: _sizeHeight * .12,
+                padding: EdgeInsets.symmetric(vertical: 20),
+                child: ListView.builder(
+                    itemCount: _category.length,
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (BuildContext context, int index) {
+                      return loadCities(_category[index], context);
+                    }),
               ),
               Container(
                 height: _sizeHeight * .3,
@@ -333,4 +634,51 @@ class _HomeState extends State<Home> {
       ),
     );
   }
+}
+
+Widget loadCities(Categories category, BuildContext context) {
+  return Container(
+    height: MediaQuery.of(context).size.height * .2,
+    width: MediaQuery.of(context).size.width * .4,
+    margin: EdgeInsets.only(right: 10),
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(20),
+      image: DecorationImage(
+        fit: BoxFit.cover,
+        image: NetworkImage(
+            'https://www.nairobibusinessmonthly.com/wp-content/uploads/2017/09/1185653211adc064092a681acf400e11148895e8.jpg'),
+      ),
+    ),
+    clipBehavior: Clip.hardEdge,
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Container(
+          child: Text(
+            category.name,
+            style: TextStyle(
+                color: Colors.white, fontWeight: FontWeight.bold, fontSize: 19),
+          ),
+        ),
+        ElevatedButton(
+            onPressed: null,
+            style: ButtonStyle(
+                // backgroundColor: Colors.white
+                ),
+            child: Row(
+              children: [
+                Text(
+                  "Explore",
+                  style: TextStyle(
+                      color: Colors.white, fontWeight: FontWeight.bold),
+                ),
+                SizedBox(
+                  width: 4,
+                ),
+                Icon(PhosphorIcons.arrow_right)
+              ],
+            ))
+      ],
+    ),
+  );
 }
